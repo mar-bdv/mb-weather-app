@@ -1,0 +1,186 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+}
+
+body::before {
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.container {
+    width: 600px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.37);
+    padding: 25px;
+    border-radius: 14px;
+}
+
+@media (max-width: 707px) {
+    .container { 
+        width: 400px;
+    }
+}
+
+.search {
+    position: relative;
+}
+
+.search::before {
+    content: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.7422 10.3439C12.5329 9.2673 13 7.9382 13 6.5C13 2.91015 10.0899 0 6.5 0C2.91015 0 0 2.91015 0 6.5C0 10.0899 2.91015 13 6.5 13C7.93858 13 9.26801 12.5327 10.3448 11.7415L10.3439 11.7422C10.3734 11.7822 10.4062 11.8204 10.4424 11.8566L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L11.8566 10.4424C11.8204 10.4062 11.7822 10.3734 11.7422 10.3439ZM12 6.5C12 9.53757 9.53757 12 6.5 12C3.46243 12 1 9.53757 1 6.5C1 3.46243 3.46243 1 6.5 1C9.53757 1 12 3.46243 12 6.5Z" fill="black"/></svg>');
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none; 
+}
+
+.search__input {
+    width: 100%;
+    background-color: rgb(255, 255, 255, 26%);
+    border: none;
+    border-radius: 14px;
+    padding: 20px 50px;
+    font-size: 16px;
+    box-sizing: border-box;
+
+}
+.search__input::placeholder {
+    color: black;
+}
+
+
+.main-info__date {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.main-info__temp {
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-info__geo {
+    margin-top: 2px;
+    font-size: 35px;
+    margin-bottom: 0;
+
+}
+
+.main-info__feelslike, .main-info__minmax {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.main-info__general {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.main-info__hr {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.info { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px 50px;
+
+}
+
+.info__block { 
+    flex: 1 1 45%; 
+    box-sizing: border-box;
+    padding: 0px 30px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px;
+}
+
+.info__block-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.info__block-value {
+    font-size: 20px; 
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+}
+
+@media (max-width: 767px) {
+    .info__block { 
+        flex: 1 1 100%; 
+    }
+}
+
+.sunny {
+    background-image: url('images/sunny_bg_img.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.rainy {
+    background-image: url('images/rainy_bg_img.png');  
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(0, 0, 0); 
+
+}
+
+.cloudy{
+    background-image: url('images/cloudy_bg_img.png') ;
+    background-size: cover;
+    background-position: center;
+    
+} 
+
+.snowy {
+    background-image: url('images/snow_bg_img.png');  
+    background-size: cover;
+    background-position: center;
+}
+
+.default-weather {
+    background-image: url('/images/default_bg_img.png');  
+    background-size: cover;
+    background-position: center;
+}
+
+.sun-chart {
+    margin: 0px;
+    padding: 50px;
+} 
+
+.sun-path {
+    position: relative;
+}
+
+.sun-svg {
+    width: 100%;
+    height: auto;
+}
+
+.time {
+    position: absolute;
+    bottom: -20px;
+    font-size: 16px;
+    text-align: center;
+    width: 50px;
+    font-weight: 600;
+}
+
+.sunrise-time {
+    left: 0;
+}
+
+.sunset-time {
+    right: 0;
+}

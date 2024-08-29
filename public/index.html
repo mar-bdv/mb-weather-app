@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="search">
+            <input type="text" class="search__input" placeholder="Поиск">
+        </div>
+
+        <div class="error-message" style="display:none; color: red; margin-top: 10px;"></div>
+
+
+        <div class="main-info">
+            <p class="main-info__date"></p>
+            <p class="main-info__temp"></p>
+            <p class="main-info__geo"></p>
+            <p class="main-info__feelslike">
+                <span class="main-info__minmax">
+                    <span class="main-info__min"></span> 
+                    / 
+                    <span class="main-info__max"></span> 
+                </span>
+                Ощущается как:
+                <span class="main-info__feelslike-temp"></span> 
+            </p>
+            <p class="main-info__general">
+                <span class="icon"></span>
+                <span class="main-info__general-main">
+                    
+                </span>
+                <span class="main-info__general-descr">
+                    
+                </span>
+            </p>
+            <hr class="main-info__hr">
+        </div>
+
+
+        <div class="info">
+            <div class="info__block info__block--humidity">
+                <p class="info__block-name">Влажность:</p>
+                <p class="info__block-value" id="humidity"></p>
+            </div>
+
+            <div class="info__block info__block--wind">
+                <p class="info__block-name">Скорость ветра:</p>
+                <p class="info__block-value" id="wind"></p>
+            </div>
+        
+
+            <div class="info__block info__block--pressure">
+                <p class="info__block-name">Давление:</p>
+                <p class="info__block-value" id="pressure"></p>
+            </div>
+        
+
+            <div class="info__block info__block--visibility">
+                <p class="info__block-name">Видимость:</p>
+                <p class="info__block-value" id="visibility"></p>
+            </div>
+        </div>
+
+        <div class="sun-chart">
+            <div class="sun-path">
+                <svg viewBox="0 0 200 100" class="sun-svg">
+                    <line x1="10" y1="90" x2="190" y2="90" stroke="black" stroke-width="0.5" />
+                    <path d="M 10 90 A 80 80 0 0 1 190 90" stroke="orange" stroke-width="2" fill="none" />
+                </svg>
+                <div class="time sunrise-time">восход<br><span id="sunrise-time"></span></div>
+                <div class="time sunset-time">закат<br><span id="sunset-time"></span></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2024</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ru.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
