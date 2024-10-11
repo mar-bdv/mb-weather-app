@@ -20,7 +20,10 @@ document.addEventListener("DOMContentLoaded", function() {
     moment.locale('ru');
 
     function fetchWeatherData(city) {
-        fetch(`http://localhost:4000/weather?q=${encodeURIComponent(city)}`)
+        //fetch(`http://localhost:4000/weather?q=${encodeURIComponent(city)}`)
+    
+        fetch(` /weather?q=${encodeURIComponent(city)}`)
+
             .then(response => {
                 if (!response.ok) {
                     throw new Error('City not found');
